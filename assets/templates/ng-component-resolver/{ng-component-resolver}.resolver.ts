@@ -4,7 +4,7 @@ import { Store } from '@ngxs/store';
 import { StateGetElements } from '../xs-ng/StateGetElements';
 
 @Injectable()
-export class {Name_pascal}Resolver implements Resolve<any>{
+export class {Name_pascalized}Resolver implements Resolve<any>{
 
 
   constructor(

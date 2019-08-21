@@ -5,11 +5,11 @@ import { Observable } from 'rxjs';
 import { Select, Store } from '@ngxs/store';
 
 @Component({
-    selector: '{Name_dash}',
-    templateUrl: '{Name_dash}.component.html',
-    styleUrls: [`{Name_dash}.component.scss`]
+    selector: '{Name_file}',
+    templateUrl: '{Name_file}.component.html',
+    styleUrls: [`{Name_file}.component.scss`]
   })
-  export class {Name_pascal}Component {
+  export class {Name_pascalized}Component {
    
     @Select(SomeState.IsWorking) working$: Observable<boolean>;
     @Select(SomeState.getItems) items$: Observable<any[]>;

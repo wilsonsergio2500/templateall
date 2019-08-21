@@ -4,6 +4,9 @@ import { I{Name_pascalized}StateModel } from './{Name_file}.model';
 import { {Name_pascalized}Done, {Name_pascalized}Loading, {Name_pascalized}GetElements } from './{Name_file}.actions';
 import { tap, timeout, mergeMap } from 'rxjs/operators';
 
+/**
+ * Comments: {!tps.state!}
+ */
 @State<I{Name_pascalized}StateModel>({
     name: '{Name_original}',
     defaults: <I{Name_pascalized}StateModel>{

@@ -14,9 +14,9 @@ exports.__esModule = true;
 var path_1 = require("path");
 var fs_1 = require("fs");
 var format = require("string-template");
+var mustache_1 = require("mustache");
 var js_beautify_1 = require("js-beautify");
 var constants_1 = require("../constants");
-//import mkdirpPromise from 'mkdirp-promise'
 var mkdirpPromise = require('mkdirp-promise');
 /**
 * @name generateTemplate
@@ -40,6 +40,9 @@ function generateTemplatesAsync(templatePath, meta, config) {
                 injectData = __assign({}, injectData, config.Data);
             }
             var formattedData = format(content.toString(), injectData);
+            if (!!config.Data) {
+                formattedData = mustache_1.render(formattedData, injectData, null, ['{!', '!}']);
+            }
             if (config.autoIndent === true) {
                 formattedData = js_beautify_1.js_beautify(formattedData);
             }

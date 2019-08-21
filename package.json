@@ -12,6 +12,9 @@
     "compile": "babel src --out-dir .compiled --source-maps --watch",
     "templateall-generate": "node ./bin/initial.js"
   },
+  "bin": {
+    "templateall-generate": "node ./bin/initial.js"
+  },
   "keywords": [
     "templateall"
   ],

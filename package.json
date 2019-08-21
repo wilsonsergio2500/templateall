@@ -1,5 +1,5 @@
 {
-  "name": "templator",
+  "name": "templateall",
   "version": "1.0.0",
   "description": "just a typescript example",
   "main": "./src/index.ts",
@@ -10,10 +10,10 @@
     "build": "tsc",
     "deploy": "node ./node_modules/typescript/bin/tsc ./src/index.ts --outDir ./dist",
     "compile": "babel src --out-dir .compiled --source-maps --watch",
-    "templator-generate": "node ./bin/initial.js"
+    "templateall-generate": "node ./bin/initial.js"
   },
   "keywords": [
-    "templator"
+    "templateall"
   ],
   "author": "sergio wilson",
   "license": "MIT",

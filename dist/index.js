@@ -51,21 +51,7 @@ var get_document_types_1 = require("./utils/interactions/get-document-types");
 var get_document_selection_1 = require("./utils/interactions/get-document-selection");
 var get_files_1 = require("./utils/get-files");
 var generate_templates_1 = require("./utils/generate-templates");
-// const Execute = () =>{
-//     const config = getConfig();
-//     async function DoAsync() {
-//         let meta = await getDocumentTypesAsync();
-//         const sel = await getDocumentSelectionAsync(config);
-//         const files = getFiles(sel.path);
-//         const { type: Type, path } = sel;
-//         meta = { ...meta, Type, path };
-//         for (var i = 0; i < files.length; i++) {
-//             await generateTemplatesAsync(files[i], meta, config);
-//         }
-//     }
-//     DoAsync();
-// }
-var Execute = function () {
+function Execute() {
     var config = get_config_1.getConfig();
     function DoAsync() {
         return __awaiter(this, void 0, void 0, function () {
@@ -98,5 +84,5 @@ var Execute = function () {
         });
     }
     DoAsync();
-};
-module.exports = Execute;
+}
+exports.Execute = Execute;

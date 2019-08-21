@@ -17,6 +17,10 @@
   ],
   "author": "sergio wilson",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wilsonsergio2500/templator.git"
+  },
   "devDependencies": {
     "@types/inquirer": "0.0.44",
     "@types/js-beautify": "^1.8.1",

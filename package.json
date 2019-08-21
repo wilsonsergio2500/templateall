@@ -1,6 +1,6 @@
 {
   "name": "templateal",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Create Templates Anywhere",
   "main": "./src/index.ts",
   "scripts": {
@@ -10,10 +10,10 @@
     "build": "tsc",
     "deploy": "node ./node_modules/typescript/bin/tsc ./src/index.ts --outDir ./dist",
     "compile": "babel src --out-dir .compiled --source-maps --watch",
-    "templateal-generate": "node ./bin/initial.js"
+    "templateall-create": "node ./bin/initial.js"
   },
   "bin": {
-    "templateal-generate": "./bin/initial.js"
+    "templateall-create": "./bin/initial.js"
   },
   "keywords": [
     "templateal"

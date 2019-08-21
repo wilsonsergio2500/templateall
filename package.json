@@ -1,7 +1,7 @@
 {
   "name": "templateal",
-  "version": "1.0.0",
-  "description": "just a typescript example",
+  "version": "1.0.2",
+  "description": "Create Templates Anywhere",
   "main": "./src/index.ts",
   "scripts": {
     "test": "test",
@@ -13,7 +13,7 @@
     "templateal-generate": "node ./bin/initial.js"
   },
   "bin": {
-    "templateal-generate": "node ./bin/initial.js"
+    "templateal-generate": "./bin/initial.js"
   },
   "keywords": [
     "templateal"

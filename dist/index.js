@@ -86,3 +86,4 @@ function Execute() {
     DoAsync();
 }
 exports.Execute = Execute;
+module.exports = Execute;

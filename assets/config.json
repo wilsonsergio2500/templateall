@@ -1,0 +1,16 @@
+{
+  "templates": "C:\\Apps\\node-ts-templator\\templator\\templator\\assets\\templates",
+  "types": {
+    "NGXS State": "state",
+    "NGXS State & List Filter Paginator": "state-list-paginator",
+    "NG Component & Resolver": "ng-component-resolver",
+    "NG Component": "ng-component",
+    "NG Component & Formly": "ng-component-formly",
+    "NG Component & List Filter Paginator": "ng-component-list-filter"
+
+  },
+  "autoIndent": true,
+  "Data": {
+
+  }
+}

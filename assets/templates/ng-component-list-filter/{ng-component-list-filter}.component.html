@@ -1,0 +1,63 @@
+<div fxLayout="column" fxFlex="100">
+
+    <div fxLayout="column" fxLayoutAlign="start center" [ngStyle]="{'padding-top.px': 30}" *ngIf="working$ | async as loading; else done">
+      <mat-progress-spinner mode="indeterminate" [diameter]="30" [strokeWidth]="2"></mat-progress-spinner>
+      <span [ngStyle]="{'padding.px': 10}">Loading Items...</span>
+    </div>
+  
+   
+  
+    <ng-template #done>
+  
+      <header-back-navigator>{{{componentTitle}}}</header-back-navigator>
+
+      <list-filter [fields]="fields$ | async" [columnOptions]="fieldSolver$ | async" (onFieldChange)="fieldChange($event)" (onApplyFilter)="applyFilter($event)" (onClearFilter)="onClearFilter()"></list-filter>
+  
+      <ng-container *ngIf="page$ | async as page">
+
+          <ng-container *ngIf="page.length === 0">
+              <mat-card>
+                No records found
+              </mat-card>
+            </ng-container>
+
+        <ng-container *ngIf="page.length > 0">
+
+            <mat-table [dataSource]="page" matSort>
+
+                <ng-container matColumnDef="Field">
+                    <mat-header-cell *matHeaderCellDef mat-sort-header> Field </mat-header-cell>
+                    <mat-cell *matCellDef="let row" data-label="Field">
+                      <span class="mobile-label"> Field </span>
+                      <span class="value">{{row['Field']}}</span>
+                    </mat-cell>
+                  </ng-container>
+
+                 <ng-container matColumnDef="Action">
+                    <mat-header-cell *matHeaderCellDef mat-sort-header></mat-header-cell>
+                    <mat-cell *matCellDef="let row" data-label="Action">
+                      <!-- <a mat-button color="primary" routerLink="../somepath/{{row['some']}}">View</a> -->
+                    </mat-cell>
+                  </ng-container> 
+
+                <mat-header-row *matHeaderRowDef="['Field', 'Action']"></mat-header-row>
+                <mat-row *matRowDef="let row; columns: ['Field', 'Action']"></mat-row>
+            </mat-table>
+
+            <ng-container *ngIf="(size$ | async) > 5">
+                <mat-paginator [length]="size$ | async" (page)="pageEvent = onPageEvent($event)"
+                               [pageSize]="15"
+                               [pageSizeOptions]="[5, 10, 25, 100]">
+                </mat-paginator>
+              </ng-container>
+
+        </ng-container>
+
+
+
+      </ng-container>
+
+    </ng-template>
+  
+  
+  </div>

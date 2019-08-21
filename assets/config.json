@@ -1,5 +1,5 @@
 {
-  "templates": "C:\\Apps\\node-ts-templator\\templator\\templator\\assets\\templates",
+  "templates": "C:\\templateall\\templates",
   "types": {
     "NGXS State": "state",
     "NGXS State & List Filter Paginator": "state-list-paginator",
@@ -11,6 +11,6 @@
   },
   "autoIndent": true,
   "Data": {
-
+    "tps" : { "state" : "just an example"}	
   }
 }

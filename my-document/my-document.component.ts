@@ -5,22 +5,22 @@ import { Observable } from 'rxjs';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Select, Store, ofActionSuccessful,  Actions} from '@ngxs/store';
 import { Navigate } from '@ngxs/router-plugin';
-import { I{Name_pascalized}Form } from './{Name_file}.contract';
+import { I{Name_pascalized }Form } from './my-document.contract';
 
 @Component({
-    selector: '{Name_file}',
-    templateUrl: '{Name_file}.component.html',
-    styleUrls: [`{Name_file}.component.scss`]
+    selector: 'my-document',
+    templateUrl: 'my-document.component.html',
+    styleUrls: [`my-document.component.scss`]
   })
-export class {Name_pascalized}Component implements OnInit {
+export class MyDocumentComponent implements OnInit {
    
-    formlyGroup: FormlyGroup <I{Name_pascalized}Form>;
+    formlyGroup: FormlyGroup <IMyDocumentForm>;
     @Select(SomeState.IsWorking) working$: Observable<boolean>;
     //@Select(SomeState.getItems) items$: Observable<any[]>;
 
     btnReadyLabel = 'Update';
     btnLoadingLabel = 'Updating...';
-    componentTitle = '{Name_titlelized} Title';
+    componentTitle = 'My Document Title';
 
     constructor(
       private store: Store,
@@ -35,7 +35,7 @@ export class {Name_pascalized}Component implements OnInit {
     }
 
     bindForm(){
-        this.formlyGroup = new FormlyGroup<I{Name_pascalized}Form>({
+        this.formlyGroup = new FormlyGroup<IMyDocumentForm>({
         SomeField: new FieldTypes.HiddenField('SomeField'),
       })
     }
@@ -60,7 +60,7 @@ export class {Name_pascalized}Component implements OnInit {
       // do something...
       //const PageTypeId = this.activatedRoute.snapshot.params['dashboardPageId'];
       //const RequestId = this.activatedRoute.snapshot.params['pageDetailId'];
-      this.store.dispatch(new Navigate([`main/fos/details/request-detail/${PageTypeId}/${RequestId}`]));
+      this.store.dispatch(new Navigate([`main/fos/details/request-detail/$/$`]));
     }
 
     formSubmit($event) {

@@ -1,7 +1,6 @@
 import { resolve, sep } from 'path';
 import { readFileSync, writeFile, writeFileSync } from 'fs';
 import * as format from 'string-template'
-import * as stringFormat from 'string-format';
 import { render} from 'mustache';
 import { IGenrateMeta } from "../types/generate-meta";
 import { IConfig } from '../types/config';

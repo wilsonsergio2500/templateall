@@ -1,6 +1,6 @@
 {
   "name": "templateall",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Create Templates Anywhere",
   "main": "./src/index.ts",
   "scripts": {
@@ -22,7 +22,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/wilsonsergio2500/templator.git"
+    "url": "https://github.com/wilsonsergio2500/templateall.git"
   },
   "devDependencies": {
     "@types/inquirer": "0.0.44",

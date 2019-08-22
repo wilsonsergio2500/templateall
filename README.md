@@ -120,22 +120,6 @@ export class {Name_pascalized}State {
         private httpClient: HttpClient
     ){}
 
-@Selector()
-static IsWorking(state: I{Name_pascalized}StateModel) : boolean {
-    return state.working;
-}
-
-@Selector()
-static getItems(state: I{Name_pascalized}StateModel): any[] {
-    return state.records;
-}
-
-@Action({Name_pascalized}Done)
-on{Name_pascalized}Done(ctx: StateContext<I{Name_pascalized}StateModel>) {
-    ctx.patchState({
-      working: false
-    });
-}
 ...
 ```
 - Will provide the following results
@@ -175,27 +159,19 @@ export class MyDocumentState {
         private httpClient: HttpClient
     ){}
 
-@Selector()
-  static IsWorking(state: IMyDocumentStateModel) : boolean {
-    return state.working;
-  }
-
-  @Selector()
-  static getItems(state: IMyDocumentStateModel): any[] {
-    return state.records;
-  }
-
-  @Action(MyDocumentDone)
-  onMyDocumentDone(ctx: StateContext<IMyDocumentStateModel>) {
-    ctx.patchState({
-      working: false
-    });
-  }
 ...
 ```
+
+## Alternative
+
+You could inject custom metadata by including this in the `Data` attribute in [config.json][configExample] check the example. You could extrapolate this information by using Mustache. However the custom Mustache Tag has been defined as `['{!', '!}']` This is to avoid conflict with already common usage. 
+
+[Ask Me More][more]
 
 ## Contributors
 [<img alt="wilsonsergio2500" src="https://avatars2.githubusercontent.com/u/2171533?v=4&s=100" width="100">](https://github.com/wilsonsergio2500)
 
 [npm]: https://www.npmjs.com/
 [templateFiles]: /assets/
+[configExample]: /assets/config.json
+[more]: https://github.com/wilsonsergio2500/templateall/issues

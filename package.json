@@ -1,6 +1,6 @@
 {
-  "name": "templateal",
-  "version": "1.0.3",
+  "name": "templateall",
+  "version": "1.0.1",
   "description": "Create Templates Anywhere",
   "main": "./src/index.ts",
   "scripts": {
@@ -16,7 +16,7 @@
     "templateall-create": "./bin/initial.js"
   },
   "keywords": [
-    "templateal"
+    "templateall"
   ],
   "author": "sergio wilson",
   "license": "MIT",

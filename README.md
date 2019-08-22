@@ -19,6 +19,23 @@ This module is distributed via [npm][npm]. In order to scafold or create boilerp
 ```
 npm install templateall -g
 ```
+
+## Running The Command
+The command would prompt you for document name and document type, the list of types is orginated from the Types defined in the configuration file (config.json)
+
+```
+templateall-create
+```
+<p align="center">
+<img src="https://im.ages.io/RTLYaintl1"/>
+</p>
+
+On Success the module will provide confirmation of the documents created
+
+<p align="center">
+<img src="https://im.ages.io/MxZjdintl1"/>
+</p>
+
 ## Prelude
 In order stay consistent and provide ownership to the template creator and apply the least amount of configuration when running the module. The configuration file config.json and the templates must be under one common directory. 
 
@@ -86,8 +103,9 @@ export class {Name_pascalized}GetElements {
 import { Store, State, Selector, StateContext, Action } from '@ngxs/store';
 import { HttpClient } from '@angular/common/http';
 import { I{Name_pascalized}StateModel } from './{Name_file}.model';
-import { {Name_pascalized}Done, {Name_pascalized}Loading, {Name_pascalized}GetElements } from './{Name_file}.actions';
-import { tap, timeout, mergeMap } from 'rxjs/operators';
+import { {Name_pascalized}Done, {Name_pascalized}Loading, {Name_pascalized}GetElements } 
+from './{Name_file}.actions';
+import { tap, mergeMap } from 'rxjs/operators';
 
 @State<I{Name_pascalized}StateModel>({
 name: '{Name_camelized}State',
@@ -118,6 +136,61 @@ on{Name_pascalized}Done(ctx: StateContext<I{Name_pascalized}StateModel>) {
       working: false
     });
 }
+...
+```
+- Will provide the following results
+######  Action File (my-document.actions.ts)
+```Typescript
+export class MyDocumentLoading {
+  static type = '[My Document] Set As Working';
+}
+
+export class MyDocumentDone {
+  static type = '[My Document] Set As Done';
+}
+
+export class MyDocumentGetElements {
+  static type = '[My Document] Get Elements';
+}
+```
+######  State File (my-document.state.ts)
+```Typescript
+import { Store, State, Selector, StateContext, Action } from '@ngxs/store';
+import { HttpClient } from '@angular/common/http';
+import { IMyDocumentStateModel } from './my-document.model';
+import { MyDocumentDone, MyDocumentLoading, MyDocumentGetElements } 
+from './my-document.actions';
+import { tap, mergeMap } from 'rxjs/operators';
+
+@State<IMyDocumentStateModel>({
+    name: 'myDocumentState',
+    defaults: <IMyDocumentStateModel>{
+        working: true,
+        records: [],
+      }
+})
+export class MyDocumentState {
+
+    constructor(
+        private httpClient: HttpClient
+    ){}
+
+@Selector()
+  static IsWorking(state: IMyDocumentStateModel) : boolean {
+    return state.working;
+  }
+
+  @Selector()
+  static getItems(state: IMyDocumentStateModel): any[] {
+    return state.records;
+  }
+
+  @Action(MyDocumentDone)
+  onMyDocumentDone(ctx: StateContext<IMyDocumentStateModel>) {
+    ctx.patchState({
+      working: false
+    });
+  }
 ...
 ```
 

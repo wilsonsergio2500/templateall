@@ -20,9 +20,10 @@ This module is distributed via [npm][npm]. In order to scafold or create boilerp
 npm install templateall -g
 ```
 ## Prelude
+In order stay consistent and provide ownership to the template creator and apply the least amount of configuration when running the module. The configuration file config.json and the templates must be under one common directory. 
 
-<div class="extended-markdown tip border rounded-1 mb-4 p-3 border-blue bg-blue-light f5">
-<p><strong>Tip:</strong> When viewing a conversation, you can automatically quote text in a comment by highlighting the text, then typing <code>r</code>. You can quote an entire comment by clicking <span class="octicon octicon-kebab-horizontal" aria-label="The horizontal kebab icon" title="The horizontal kebab icon"></span>, then <strong>Quote reply</strong>. For more information about keyboard shortcuts, see "<a href="/en/articles/keyboard-shortcuts/">Keyboard shortcuts</a>."</p>
+<div style="border-color: #0366d6" class="extended-markdown tip border rounded-1 mb-4 p-3 border-blue bg-blue-light f5">
+<p><strong>Tip:</strong> The package assumes that the configuration folder and the templates folder could be found at <strong><i>root\templateall.</i></strong> thus in a Windows machine <b><i>C:\templateall.</i></b> However, where the templates are actually locatec could be specified in the configuration file <b><i>config.json</i></b></p>
 </div>
 
 [npm]: https://www.npmjs.com/

@@ -66,7 +66,7 @@ In order stay consistent and provide ownership to the template creator and apply
 ```
 - In types you could specify the name of the template and under what name the templates would be found.
 
-<p>
+<p align="center">
     <img src="https://im.ages.io/LxZjdintl1"/>
 </p>
 
@@ -193,6 +193,9 @@ export class MyDocumentState {
   }
 ...
 ```
+
+## Contributors
+[<img alt="wilsonsergio2500" src="https://avatars2.githubusercontent.com/u/2171533?v=4&s=100" width="100">](https://github.com/wilsonsergio2500)
 
 [npm]: https://www.npmjs.com/
 [templateFiles]: /assets/

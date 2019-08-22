@@ -1,6 +1,6 @@
 {
   "name": "templateall",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Create Templates Anywhere",
   "main": "./src/index.ts",
   "scripts": {

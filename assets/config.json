@@ -9,7 +9,7 @@
     "NG Component & List Filter Paginator": "ng-component-list-filter"
 
   },
-  "autoIndent": true,
+  "autoIndent": false,
   "Data": {
     "tps" : { "state" : "just an example"}	
   }

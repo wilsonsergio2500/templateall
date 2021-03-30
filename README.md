@@ -169,9 +169,6 @@ You could inject custom metadata by including this in the `Data` attribute in [c
 
 [Ask Me More][more]
 
-## Contributors
-[<img alt="wilsonsergio2500" src="https://avatars2.githubusercontent.com/u/2171533?v=4&s=100" width="100">](https://github.com/wilsonsergio2500)
-
 [npm]: https://www.npmjs.com/
 [templateFiles]: /assets/
 [configExample]: /assets/config.json

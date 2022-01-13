@@ -6,8 +6,9 @@
     "NG Component & Resolver": "ng-component-resolver",
     "NG Component": "ng-component",
     "NG Component & Formly": "ng-component-formly",
-    "NG Component & List Filter Paginator": "ng-component-list-filter"
-
+    "NG Component & List Filter Paginator": "ng-component-list-filter",
+    "NGXS State + Firebase In Memory (Pagination)": "ngxs-state-firebase-mem",
+    "NGXS State + Firebase (Smart Pagination)": "ngxs-state-firebase-smartpag"
   },
   "autoIndent": false,
   "Data": {
